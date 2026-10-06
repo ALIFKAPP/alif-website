@@ -1,0 +1,507 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Politique de confidentialité · Alif</title>
+  <meta name="description" content="Politique de confidentialité de l'application Alif.">
+  <link rel="icon" href="/assets/favicon.png">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <style>body{margin:0;padding:0}</style>
+</head>
+<body>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;1,500&family=Public+Sans:wght@400;500;600;700&display=swap');
+
+  :root {
+    --bg: #FAF7F1;
+    --surface: #FFFFFF;
+    --surface-2: #F1ECE1;
+    --border: #E4DDCC;
+    --text: #221F1A;
+    --text-muted: #6B6459;
+    --gold: #A9760F;
+    --gold-soft: rgba(169, 118, 15, 0.1);
+    --gold-dim: rgba(169, 118, 15, 0.35);
+    --serif: 'Lora', 'Iowan Old Style', Georgia, serif;
+    --sans: 'Public Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #100F0D;
+      --surface: #1A1815;
+      --surface-2: #221F1A;
+      --border: #332E26;
+      --text: #F3EFE6;
+      --text-muted: #A69C8C;
+      --gold: #F0CB84;
+      --gold-soft: rgba(240, 203, 132, 0.1);
+      --gold-dim: rgba(240, 203, 132, 0.35);
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #100F0D;
+    --surface: #1A1815;
+    --surface-2: #221F1A;
+    --border: #332E26;
+    --text: #F3EFE6;
+    --text-muted: #A69C8C;
+    --gold: #F0CB84;
+    --gold-soft: rgba(240, 203, 132, 0.1);
+    --gold-dim: rgba(240, 203, 132, 0.35);
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--sans);
+    line-height: 1.6;
+  }
+
+  .masthead {
+    border-bottom: 1px solid var(--border);
+    padding: 28px 24px 22px;
+    background: var(--surface);
+  }
+  .masthead-inner {
+    max-width: 760px;
+    margin: 0 auto;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .wordmark {
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 600;
+    font-size: 22px;
+    color: var(--gold);
+    letter-spacing: 0.01em;
+  }
+  .doc-label {
+    font-family: var(--sans);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+
+  main { max-width: 760px; margin: 0 auto; padding: 48px 24px 100px; }
+
+  .doc-title {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: clamp(30px, 5vw, 42px);
+    line-height: 1.15;
+    text-wrap: balance;
+    margin: 0 0 10px;
+  }
+  .doc-meta {
+    color: var(--text-muted);
+    font-size: 14px;
+    margin: 0 0 8px;
+  }
+  .doc-intro {
+    font-size: 16.5px;
+    color: var(--text);
+    max-width: 62ch;
+    margin: 22px 0 0;
+  }
+  .doc-intro em { font-style: italic; color: var(--text-muted); }
+
+  nav.toc {
+    margin: 36px 0 8px;
+    padding: 18px 20px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+  }
+  nav.toc .toc-label {
+    font-size: 11.5px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 10px;
+    display: block;
+  }
+  nav.toc ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    columns: 2;
+    column-gap: 28px;
+  }
+  nav.toc li { break-inside: avoid; margin-bottom: 7px; }
+  nav.toc a {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 14px;
+    display: flex;
+    gap: 8px;
+  }
+  nav.toc a:hover { color: var(--gold); }
+  nav.toc .n {
+    font-variant-numeric: tabular-nums;
+    color: var(--gold);
+    font-weight: 600;
+    width: 1.4em;
+    flex-shrink: 0;
+  }
+
+  section.article {
+    margin-top: 46px;
+    padding-top: 8px;
+    scroll-margin-top: 20px;
+  }
+  section.article + section.article {
+    border-top: 1px solid var(--border);
+    padding-top: 40px;
+  }
+  .article-head {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    margin-bottom: 14px;
+  }
+  .article-num {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 16px;
+    color: var(--gold);
+    flex-shrink: 0;
+    font-variant-numeric: tabular-nums;
+  }
+  .article-head h2 {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: 22px;
+    margin: 0;
+    text-wrap: balance;
+  }
+
+  .article-body { max-width: 66ch; }
+  .article-body p { margin: 0 0 14px; }
+  .article-body ul { margin: 0 0 14px; padding-left: 20px; }
+  .article-body li { margin-bottom: 7px; }
+  .article-body strong { color: var(--text); font-weight: 600; }
+
+  .callout {
+    background: var(--gold-soft);
+    border-left: 3px solid var(--gold);
+    border-radius: 4px;
+    padding: 14px 16px;
+    font-size: 14.5px;
+    color: var(--text);
+    margin: 14px 0 18px;
+  }
+  .callout strong { color: var(--gold); }
+
+  .placeholder {
+    background: var(--surface-2);
+    border: 1px dashed var(--gold-dim);
+    border-radius: 4px;
+    padding: 1px 6px;
+    font-family: var(--sans);
+    font-size: 0.92em;
+    color: var(--gold);
+  }
+
+  code.svc {
+    font-family: ui-monospace, 'SF Mono', Menlo, monospace;
+    font-size: 0.88em;
+    background: var(--surface-2);
+    padding: 1px 6px;
+    border-radius: 4px;
+    color: var(--text);
+  }
+
+  a.inline-link { color: var(--gold); }
+
+  footer {
+    max-width: 760px;
+    margin: 60px auto 0;
+    padding: 26px 24px 40px;
+    border-top: 1px solid var(--border);
+    color: var(--text-muted);
+    font-size: 13px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  footer a { color: var(--text-muted); }
+
+  ::selection { background: var(--gold-dim); }
+
+  @media (max-width: 560px) {
+    nav.toc ol { columns: 1; }
+  }
+</style>
+
+<div class="masthead">
+  <div class="masthead-inner">
+    <a class="wordmark" href="/" style="text-decoration:none">Alif</a>
+    <span class="doc-label">Politique de confidentialité</span>
+  </div>
+</div>
+
+<main>
+  <h1 class="doc-title">Politique de confidentialité</h1>
+  <p class="doc-meta">Dernière mise à jour : 6 octobre 2026 · Version 1.0</p>
+  <p class="doc-intro">
+    Alif est une application d'accompagnement religieux — lecture et mémorisation du Coran, hadiths, invocations
+    et pratique quotidienne — éditée par Alif K. Cette page explique, en langage clair, quelles données
+    l'application traite, pourquoi, et comment tu gardes le contrôle dessus. <em>Le principe directeur d'Alif :
+    tes données restent sur ton téléphone, sauf lorsque tu choisis explicitement le contraire.</em>
+  </p>
+
+  <nav class="toc" aria-label="Sommaire">
+    <span class="toc-label">Sommaire</span>
+    <ol>
+      <li><a href="#art-1"><span class="n">01</span>Qui est responsable de tes données</a></li>
+      <li><a href="#art-2"><span class="n">02</span>Ce qui reste sur ton appareil</a></li>
+      <li><a href="#art-3"><span class="n">03</span>Localisation — direction de la Qibla</a></li>
+      <li><a href="#art-4"><span class="n">04</span>Sauvegarde cloud (optionnelle)</a></li>
+      <li><a href="#art-5"><span class="n">05</span>Abonnement de soutien</a></li>
+      <li><a href="#art-6"><span class="n">06</span>Notifications</a></li>
+      <li><a href="#art-7"><span class="n">07</span>Ce que nous ne faisons jamais</a></li>
+      <li><a href="#art-8"><span class="n">08</span>Contenus affichés depuis des services tiers</a></li>
+      <li><a href="#art-9"><span class="n">09</span>Profil enfant</a></li>
+      <li><a href="#art-10"><span class="n">10</span>Durée de conservation</a></li>
+      <li><a href="#art-11"><span class="n">11</span>Sécurité</a></li>
+      <li><a href="#art-12"><span class="n">12</span>Transferts hors Union européenne</a></li>
+      <li><a href="#art-13"><span class="n">13</span>Tes droits</a></li>
+      <li><a href="#art-14"><span class="n">14</span>Modifications de cette politique</a></li>
+      <li><a href="#art-15"><span class="n">15</span>Contact</a></li>
+    </ol>
+  </nav>
+
+  <section class="article" id="art-1">
+    <div class="article-head"><span class="article-num">01</span><h2>Qui est responsable de tes données</h2></div>
+    <div class="article-body">
+      <p>Alif est éditée par :</p>
+      <p>
+        <strong>Alif K</strong>, société par actions simplifiée unipersonnelle (SASU)
+        en cours d’immatriculation au RCS de Strasbourg<br>
+        Siège social : 1 rue du Milieu, 67202 Wolfisheim<br>
+        Contact : <a class="inline-link" href="mailto:contact@alif-k.com">contact@alif-k.com</a>
+      </p>
+      <p>
+        Alif K est responsable du traitement des données décrites ci-dessous, au sens du Règlement (UE)
+        2016/679 (RGPD) et de la loi Informatique et Libertés.
+      </p>
+    </div>
+  </section>
+
+  <section class="article" id="art-2">
+    <div class="article-head"><span class="article-num">02</span><h2>Ce qui reste sur ton appareil</h2></div>
+    <div class="article-body">
+      <p>Par défaut, Alif ne collecte rien sur ses propres serveurs. Tes données d'usage sont enregistrées uniquement sur ton téléphone :</p>
+      <ul>
+        <li>ta progression de mémorisation (versets, sourates) ;</li>
+        <li>tes favoris et marque-pages (versets, invocations, hadiths, noms d'Allah, articles du Journal) ;</li>
+        <li>tes réglages (thème, couleur d'accent, récitateur choisi, notifications) ;</li>
+        <li>tes profils, y compris le profil enfant — de simples espaces de préférences distincts sur le même appareil.</li>
+      </ul>
+      <p>
+        Ces informations ne transitent par aucun serveur d'Alif K et ne nous sont jamais accessibles.
+        Désinstaller l'application les efface définitivement, sauf si tu as activé la sauvegarde cloud
+        décrite à l'article 4.
+      </p>
+    </div>
+  </section>
+
+  <section class="article" id="art-3">
+    <div class="article-head"><span class="article-num">03</span><h2>Localisation — direction de la Qibla</h2></div>
+    <div class="article-body">
+      <p>
+        Si tu autorises l'accès à ta position (uniquement lorsque l'application est ouverte), Alif calcule la
+        direction de la Qibla directement sur ton téléphone. Ta position n'est jamais envoyée à Alif K ni à un
+        tiers, n'est pas enregistrée, et ne sert à aucune autre fin.
+      </p>
+      <p>Tu peux retirer cette autorisation à tout moment dans les réglages de ton téléphone, sans que le reste de l'application cesse de fonctionner.</p>
+    </div>
+  </section>
+
+  <section class="article" id="art-4">
+    <div class="article-head"><span class="article-num">04</span><h2>Sauvegarde cloud (optionnelle)</h2></div>
+    <div class="article-body">
+      <p>Alif propose, uniquement si tu l'actives volontairement, une sauvegarde de ta progression via « Se connecter avec Apple ». Si tu choisis cette option :</p>
+      <ul>
+        <li>un identifiant fourni par Apple sert à créer un compte (pas ton adresse e-mail réelle, sauf si tu choisis explicitement de la partager) ;</li>
+        <li>ta progression, tes favoris et tes réglages sont copiés vers une base de données hébergée par Firebase (Google), afin de pouvoir être restaurés sur un autre appareil.</li>
+      </ul>
+      <div class="callout">
+        <strong>Donnée sensible :</strong> ces informations peuvent révéler des convictions religieuses (ce que
+        tu lis, mémorises ou mets en favori). Leur traitement repose donc sur ton <strong>consentement explicite</strong>
+        au sens de l'article 9 du RGPD, recueilli au moment précis où tu actives cette fonctionnalité — jamais
+        par défaut, et jamais déduit d'un autre réglage.
+      </div>
+      <p>
+        Tu peux désactiver la sauvegarde et demander la suppression de ces données à tout moment, depuis les
+        réglages de l'application ou en écrivant à <a class="inline-link" href="mailto:contact@alif-k.com">contact@alif-k.com</a>.
+        Tant que tu n'actives pas cette fonctionnalité, aucune donnée de ce type ne quitte ton téléphone.
+      </p>
+    </div>
+  </section>
+
+  <section class="article" id="art-5">
+    <div class="article-head"><span class="article-num">05</span><h2>Abonnement de soutien</h2></div>
+    <div class="article-body">
+      <p>
+        Alif est entièrement gratuite. Tu peux, si tu le souhaites, soutenir son développement via un abonnement
+        mensuel libre, sans aucune fonctionnalité réservée en contrepartie.
+      </p>
+      <p>
+        Ce paiement est traité directement par Apple (App Store) ou Google (Play Store) selon ton appareil :
+        Alif K ne voit ni ne stocke jamais tes coordonnées bancaires. Notre prestataire technique RevenueCat
+        reçoit uniquement le statut de ton abonnement (actif ou non, palier choisi) afin que l'application puisse
+        le reconnaître — jamais tes informations de paiement.
+      </p>
+    </div>
+  </section>
+
+  <section class="article" id="art-6">
+    <div class="article-head"><span class="article-num">06</span><h2>Notifications</h2></div>
+    <div class="article-body">
+      <p>
+        Si tu les autorises, Alif t'envoie des rappels locaux — par exemple pour garder ta série de lecture.
+        Ces notifications sont programmées directement sur ton téléphone : aucune donnée n'est envoyée à un
+        serveur pour les déclencher.
+      </p>
+    </div>
+  </section>
+
+  <section class="article" id="art-7">
+    <div class="article-head"><span class="article-num">07</span><h2>Ce que nous ne faisons jamais</h2></div>
+    <div class="article-body">
+      <ul>
+        <li>Pas de publicité, ni de régie publicitaire tierce.</li>
+        <li>Pas de revente ni de partage de tes données à des fins commerciales.</li>
+        <li>Pas de traçage entre applications, pas de profilage publicitaire.</li>
+        <li>Pas de compte obligatoire : toute la lecture, la mémorisation et la découverte de contenu fonctionnent sans jamais créer de compte.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="article" id="art-8">
+    <div class="article-head"><span class="article-num">08</span><h2>Contenus affichés depuis des services tiers</h2></div>
+    <div class="article-body">
+      <p>Pour t'afficher certains contenus, Alif interroge directement, depuis ton téléphone, quelques services tiers de confiance :</p>
+      <ul>
+        <li><code class="svc">api.alquran.cloud</code>, <code class="svc">cdn.islamic.network</code> et <code class="svc">everyayah.com</code> — texte et récitation audio du Coran ;</li>
+        <li><code class="svc">cdn.jsdelivr.net</code> (projet fawazahmed0/hadith-api) — hadiths de Sahih al-Bukhari et Sahih Muslim ;</li>
+        <li>une feuille Google Sheets, via <code class="svc">opensheet.elk.sh</code> — publications du Journal ;</li>
+        <li><code class="svc">api.gold-api.com</code> et <code class="svc">api.frankfurter.dev</code> — cours de l'or et taux de change utilisés par le calculateur de Zakat ;</li>
+        <li><code class="svc">mawaqit.net</code> et une recherche Google, affichés dans l'application — horaires de prière et recherche de mosquées.</li>
+      </ul>
+      <p>
+        Ces requêtes transmettent à ces services les informations techniques inhérentes à toute connexion
+        internet (comme ton adresse IP), selon leurs propres conditions — mais Alif ne leur transmet aucune
+        information te concernant personnellement.
+      </p>
+    </div>
+  </section>
+
+  <section class="article" id="art-9">
+    <div class="article-head"><span class="article-num">09</span><h2>Profil enfant</h2></div>
+    <div class="article-body">
+      <p>
+        Le « profil enfant » est un simple mode d'affichage simplifié, choisi et activé par l'adulte titulaire
+        de l'appareil. Il ne crée pas de compte séparé et ne collecte aucune donnée supplémentaire propre à
+        l'enfant : les données restent celles décrites à l'article 2, sur l'appareil familial.
+      </p>
+    </div>
+  </section>
+
+  <section class="article" id="art-10">
+    <div class="article-head"><span class="article-num">10</span><h2>Durée de conservation</h2></div>
+    <div class="article-body">
+      <ul>
+        <li><strong>Données sur ton appareil</strong> (art. 2) : conservées tant que l'application est installée, effacées à la désinstallation.</li>
+        <li><strong>Sauvegarde cloud</strong> (art. 4, si activée) : conservée tant que ton compte existe, supprimée dans un délai de 30 jours après la suppression du compte ou sur simple demande.</li>
+        <li><strong>Statut d'abonnement</strong> (art. 5) : conservé tant que l'abonnement est actif, puis archivé le temps requis par nos obligations comptables et légales.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="article" id="art-11">
+    <div class="article-head"><span class="article-num">11</span><h2>Sécurité</h2></div>
+    <div class="article-body">
+      <p>
+        Les échanges avec nos services, lorsqu'ils existent, sont chiffrés (HTTPS/TLS). L'accès à la base de
+        données de sauvegarde cloud est restreint et protégé par les mécanismes d'authentification de Firebase.
+      </p>
+    </div>
+  </section>
+
+  <section class="article" id="art-12">
+    <div class="article-head"><span class="article-num">12</span><h2>Transferts hors Union européenne</h2></div>
+    <div class="article-body">
+      <p>
+        Firebase (Google) et RevenueCat peuvent traiter des données sur des serveurs situés hors de l'Union
+        européenne, notamment aux États-Unis. Ces transferts sont encadrés par les clauses contractuelles types
+        de la Commission européenne ou un mécanisme équivalent reconnu par le RGPD.
+      </p>
+    </div>
+  </section>
+
+  <section class="article" id="art-13">
+    <div class="article-head"><span class="article-num">13</span><h2>Tes droits</h2></div>
+    <div class="article-body">
+      <p>
+        Conformément au RGPD, tu disposes à tout moment d'un droit d'accès, de rectification, d'effacement, de
+        limitation, d'opposition et de portabilité sur tes données.
+      </p>
+      <p>
+        Comme la majorité de tes données ne quitte jamais ton appareil, tu peux exercer la plupart de ces
+        droits toi-même, directement dans l'application (modification des favoris, des réglages, désinstallation).
+        Pour tout ce qui concerne une sauvegarde cloud ou ton abonnement, écris-nous à
+        <a class="inline-link" href="mailto:contact@alif-k.com">contact@alif-k.com</a> — nous répondons sous un mois.
+      </p>
+      <p>
+        Tu peux aussi introduire une réclamation auprès de la
+        <a class="inline-link" href="https://www.cnil.fr" target="_blank" rel="noopener">CNIL</a>
+        si tu estimes que tes droits ne sont pas respectés.
+      </p>
+    </div>
+  </section>
+
+  <section class="article" id="art-14">
+    <div class="article-head"><span class="article-num">14</span><h2>Modifications de cette politique</h2></div>
+    <div class="article-body">
+      <p>
+        Cette politique peut évoluer, notamment à mesure que de nouvelles fonctionnalités sont ajoutées à Alif.
+        Toute modification substantielle te sera signalée dans l'application. La date de dernière mise à jour
+        figure en haut de cette page.
+      </p>
+    </div>
+  </section>
+
+  <section class="article" id="art-15">
+    <div class="article-head"><span class="article-num">15</span><h2>Contact</h2></div>
+    <div class="article-body">
+      <p>
+        Pour toute question sur cette politique ou sur tes données :
+        <a class="inline-link" href="mailto:contact@alif-k.com">contact@alif-k.com</a>
+      </p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <span>© <span id="year"></span> Alif K — Tous droits réservés</span>
+  <span><a href="mailto:contact@alif-k.com">contact@alif-k.com</a></span>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

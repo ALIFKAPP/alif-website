@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Télécharger Alif</title>
+  <meta name="description" content="Télécharge Alif, l'application qui t'accompagne pour mémoriser le Coran à ton rythme, et bien plus encore.">
+  <meta name="theme-color" content="#0A0A0C">
+  <meta property="og:title" content="Télécharger Alif">
+  <meta property="og:description" content="L'application qui t'accompagne pour mémoriser le Coran à ton rythme, et bien plus encore.">
+  <meta property="og:image" content="https://alif-k.com/assets/icon.png">
+  <meta property="og:url" content="https://alif-k.com/app">
+  <link rel="icon" href="/assets/favicon.png">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+  <div class="wrap">
+    <header class="top">
+      <a class="brand" href="/"><img src="/assets/icon.png" alt="">Alif</a>
+      <nav><a href="/">Découvrir Alif</a></nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <img class="symbol" src="/assets/alif-symbol.png" alt="Alif">
+        <h1>Télécharge Alif</h1>
+        <p class="lead">
+          L'application qui t'accompagne pour mémoriser le Coran à ton rythme, et bien plus encore.
+        </p>
+        <div class="stores" data-stores>
+          <span class="store soon"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.6c-.02-2.3 1.88-3.4 1.96-3.46-1.07-1.56-2.73-1.78-3.32-1.8-1.41-.14-2.76.83-3.48.83-.72 0-1.82-.81-3-.79-1.54.02-2.97.9-3.76 2.28-1.6 2.78-.41 6.9 1.15 9.16.76 1.1 1.67 2.34 2.86 2.3 1.15-.05 1.58-.74 2.97-.74 1.38 0 1.77.74 2.98.72 1.23-.02 2.01-1.12 2.76-2.23.87-1.28 1.23-2.52 1.25-2.58-.03-.01-2.4-.92-2.42-3.66zM14.1 5.86c.63-.77 1.06-1.83.94-2.89-.91.04-2.01.61-2.66 1.37-.58.67-1.09 1.76-.96 2.8 1.02.08 2.05-.52 2.68-1.28z"/></svg><span><small>Bientôt disponible sur</small><strong>App Store</strong></span></span>
+          <span class="store soon"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6 3.5v17a1 1 0 0 0 1.5.86l14-8.5a1 1 0 0 0 0-1.72l-14-8.5A1 1 0 0 0 6 3.5z"/></svg><span><small>Bientôt disponible sur</small><strong>Google Play</strong></span></span>
+        </div>
+        <p class="soon-note" data-soon-note>L'application arrive très bientôt, in shā' Allah.</p>
+      </section>
+    </main>
+
+    <footer class="bottom">
+      <span>© 2026 Alif K</span>
+      <span class="links">
+        <a href="/confidentialite/">Politique de confidentialité</a>
+        <a href="mailto:contact@alif-k.com">contact@alif-k.com</a>
+      </span>
+    </footer>
+  </div>
+  <script src="/assets/stores.js"></script>
+  <script>
+    // The link shared with the app's monthly recap: sends each phone
+    // straight to its own store once the app is published there. Computers,
+    // and phones whose store link isn't set yet, stay on this page.
+    (function () {
+      var ua = navigator.userAgent || '';
+      var isApple = /iPhone|iPad|iPod/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1);
+      var isAndroid = /Android/.test(ua);
+      if (isApple && ALIF_STORES.appStore) location.replace(ALIF_STORES.appStore);
+      else if (isAndroid && ALIF_STORES.playStore) location.replace(ALIF_STORES.playStore);
+    })();
+  </script>
+</body>
+</html>
