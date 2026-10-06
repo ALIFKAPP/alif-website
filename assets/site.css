@@ -186,3 +186,23 @@ footer.bottom .links { display: flex; gap: 20px; flex-wrap: wrap; }
   .hero .symbol { height: 104px; }
   .store { width: 100%; justify-content: center; }
 }
+
+/* Text pages (mentions légales). */
+.legal { max-width: 680px; margin: 0 auto; padding: 40px 0 80px; }
+.legal h1 {
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: clamp(30px, 5vw, 40px);
+  margin: 0 0 8px;
+}
+.legal .meta { color: var(--faint); font-size: 14px; margin: 0 0 40px; }
+.legal h2 {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin: 36px 0 10px;
+}
+.legal p { color: var(--muted); margin: 0 0 10px; }
+.legal strong { color: var(--text); font-weight: 600; }
