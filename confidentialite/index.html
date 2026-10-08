@@ -253,7 +253,7 @@
 
 <main>
   <h1 class="doc-title">Politique de confidentialité</h1>
-  <p class="doc-meta">Dernière mise à jour : 6 octobre 2026 · Version 1.0</p>
+  <p class="doc-meta">Dernière mise à jour : 8 octobre 2026 · Version 1.1</p>
   <p class="doc-intro">
     Alif est une application d'accompagnement religieux — lecture et mémorisation du Coran, hadiths, invocations
     et pratique quotidienne — éditée par Alif K. Cette page explique, en langage clair, quelles données
@@ -266,7 +266,7 @@
     <ol>
       <li><a href="#art-1"><span class="n">01</span>Qui est responsable de tes données</a></li>
       <li><a href="#art-2"><span class="n">02</span>Ce qui reste sur ton appareil</a></li>
-      <li><a href="#art-3"><span class="n">03</span>Localisation — direction de la Qibla</a></li>
+      <li><a href="#art-3"><span class="n">03</span>Localisation — Qibla et mosquées de ta ville</a></li>
       <li><a href="#art-4"><span class="n">04</span>Sauvegarde cloud (optionnelle)</a></li>
       <li><a href="#art-5"><span class="n">05</span>Abonnement de soutien</a></li>
       <li><a href="#art-6"><span class="n">06</span>Notifications</a></li>
@@ -318,12 +318,22 @@
   </section>
 
   <section class="article" id="art-3">
-    <div class="article-head"><span class="article-num">03</span><h2>Localisation — direction de la Qibla</h2></div>
+    <div class="article-head"><span class="article-num">03</span><h2>Localisation — Qibla et mosquées de ta ville</h2></div>
     <div class="article-body">
       <p>
-        Si tu autorises l'accès à ta position (uniquement lorsque l'application est ouverte), Alif calcule la
-        direction de la Qibla directement sur ton téléphone. Ta position n'est jamais envoyée à Alif K ni à un
-        tiers, n'est pas enregistrée, et ne sert à aucune autre fin.
+        Si tu autorises l'accès à ta position (uniquement lorsque l'application est ouverte), Alif l'utilise
+        pour deux choses seulement :
+      </p>
+      <ul>
+        <li>calculer la direction de la Qibla, directement sur ton téléphone ;</li>
+        <li>
+          quand tu touches « Autour de moi » dans la recherche de mosquée, retrouver le nom de ta ville. Cette
+          conversion est faite par le service de géocodage d'Apple intégré à iOS ; seul le nom de la ville est
+          ensuite utilisé pour lancer la recherche des mosquées Mawaqit correspondantes.
+        </li>
+      </ul>
+      <p>
+        Ta position n'est jamais envoyée à Alif K, n'est pas enregistrée, et ne sert à aucune autre fin.
       </p>
       <p>Tu peux retirer cette autorisation à tout moment dans les réglages de ton téléphone, sans que le reste de l'application cesse de fonctionner.</p>
     </div>
@@ -396,10 +406,11 @@
       <p>Pour t'afficher certains contenus, Alif interroge directement, depuis ton téléphone, quelques services tiers de confiance :</p>
       <ul>
         <li><code class="svc">api.alquran.cloud</code>, <code class="svc">cdn.islamic.network</code> et <code class="svc">everyayah.com</code> — texte et récitation audio du Coran ;</li>
+        <li><code class="svc">mp3quran.net</code> — récitations complètes des sourates dans la partie Écouter ;</li>
         <li><code class="svc">cdn.jsdelivr.net</code> (projet fawazahmed0/hadith-api) — hadiths de Sahih al-Bukhari et Sahih Muslim ;</li>
         <li>une feuille Google Sheets, via <code class="svc">opensheet.elk.sh</code> — publications du Journal ;</li>
         <li><code class="svc">api.gold-api.com</code> et <code class="svc">api.frankfurter.dev</code> — cours de l'or et taux de change utilisés par le calculateur de Zakat ;</li>
-        <li><code class="svc">mawaqit.net</code> et une recherche Google, affichés dans l'application — horaires de prière et recherche de mosquées.</li>
+        <li><code class="svc">mawaqit.net</code> et une recherche Google, affichés dans l'application — horaires de prière, annonces de ta mosquée (janazas, conférences) et recherche de mosquées. Lors d'une recherche « Autour de moi », le nom de ta ville est transmis à Google comme texte de recherche.</li>
       </ul>
       <p>
         Ces requêtes transmettent à ces services les informations techniques inhérentes à toute connexion
