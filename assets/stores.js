@@ -3,7 +3,7 @@
 // "Bientôt disponible" instead.
 var ALIF_STORES = {
   appStore: '', // e.g. https://apps.apple.com/app/id0000000000
-  playStore: '', // e.g. https://play.google.com/store/apps/details?id=com.alifapp.memorisation
+  playStore: '', // e.g. https://play.google.com/store/apps/details?id=com.alifk.alif
 };
 
 (function () {

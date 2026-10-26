@@ -1,0 +1,10 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["L867BYKL2T.com.alifk.alif"],
+        "components": [{ "/": "/dette*", "comment": "A debt shared from the debt book" }]
+      }
+    ]
+  }
+}
