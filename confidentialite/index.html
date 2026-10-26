@@ -253,7 +253,7 @@
 
 <main>
   <h1 class="doc-title">Politique de confidentialité</h1>
-  <p class="doc-meta">Dernière mise à jour : 8 octobre 2026 · Version 1.1</p>
+  <p class="doc-meta">Dernière mise à jour : 26 octobre 2026 · Version 1.2</p>
   <p class="doc-intro">
     Alif est une application d'accompagnement religieux — lecture et mémorisation du Coran, hadiths, invocations
     et pratique quotidienne — éditée par Alif K. Cette page explique, en langage clair, quelles données
@@ -267,7 +267,7 @@
       <li><a href="#art-1"><span class="n">01</span>Qui est responsable de tes données</a></li>
       <li><a href="#art-2"><span class="n">02</span>Ce qui reste sur ton appareil</a></li>
       <li><a href="#art-3"><span class="n">03</span>Localisation — Qibla et mosquées de ta ville</a></li>
-      <li><a href="#art-4"><span class="n">04</span>Sauvegarde cloud (optionnelle)</a></li>
+      <li><a href="#art-4"><span class="n">04</span>Sauvegarde iCloud</a></li>
       <li><a href="#art-5"><span class="n">05</span>Abonnement de soutien</a></li>
       <li><a href="#art-6"><span class="n">06</span>Notifications</a></li>
       <li><a href="#art-7"><span class="n">07</span>Ce que nous ne faisons jamais</a></li>
@@ -311,8 +311,8 @@
       </ul>
       <p>
         Ces informations ne transitent par aucun serveur d'Alif K et ne nous sont jamais accessibles.
-        Désinstaller l'application les efface définitivement, sauf si tu as activé la sauvegarde cloud
-        décrite à l'article 4.
+        Désinstaller l'application les efface de ton téléphone ; seule la sauvegarde iCloud
+        décrite à l'article 4, si elle est active, en garde une copie dans ton iCloud.
       </p>
     </div>
   </section>
@@ -340,24 +340,20 @@
   </section>
 
   <section class="article" id="art-4">
-    <div class="article-head"><span class="article-num">04</span><h2>Sauvegarde cloud (optionnelle)</h2></div>
+    <div class="article-head"><span class="article-num">04</span><h2>Sauvegarde iCloud</h2></div>
     <div class="article-body">
-      <p>Alif propose, uniquement si tu l'actives volontairement, une sauvegarde de ta progression via « Se connecter avec Apple ». Si tu choisis cette option :</p>
-      <ul>
-        <li>un identifiant fourni par Apple sert à créer un compte (pas ton adresse e-mail réelle, sauf si tu choisis explicitement de la partager) ;</li>
-        <li>ta progression, tes favoris et tes réglages sont copiés vers une base de données hébergée par Firebase (Google), afin de pouvoir être restaurés sur un autre appareil.</li>
-      </ul>
-      <div class="callout">
-        <strong>Donnée sensible :</strong> ces informations peuvent révéler des convictions religieuses (ce que
-        tu lis, mémorises ou mets en favori). Leur traitement repose donc sur ton <strong>consentement explicite</strong>
-        au sens de l'article 9 du RGPD, recueilli au moment précis où tu actives cette fonctionnalité — jamais
-        par défaut, et jamais déduit d'un autre réglage.
-      </div>
       <p>
-        Tu peux désactiver la sauvegarde et demander la suppression de ces données à tout moment, depuis les
-        réglages de l'application ou en écrivant à <a class="inline-link" href="mailto:contact@alif-k.com">contact@alif-k.com</a>.
-        Tant que tu n'actives pas cette fonctionnalité, aucune donnée de ce type ne quitte ton téléphone.
+        Sur iPhone, Alif copie automatiquement ses données (progression, favoris, cahier de dettes, Zakat,
+        réglages) dans <strong>ton propre compte iCloud</strong>, afin que tu les retrouves sur un nouveau
+        téléphone. Cette copie est conservée par Apple dans ton espace iCloud personnel, selon les conditions
+        qui te lient à Apple.
       </p>
+      <ul>
+        <li>Alif K n'a <strong>aucun accès</strong> à cette sauvegarde : elle ne transite jamais par nos serveurs.</li>
+        <li>Aucun compte n'est créé chez nous ; la sauvegarde utilise simplement l'identifiant Apple déjà connecté sur ton iPhone.</li>
+        <li>Tu peux la désactiver à tout moment dans les réglages de l'application, ou couper iCloud pour Alif dans les réglages de ton iPhone.</li>
+      </ul>
+      <p>Si ton iPhone n'est pas connecté à iCloud, aucune sauvegarde n'est faite.</p>
     </div>
   </section>
 
@@ -436,7 +432,7 @@
     <div class="article-body">
       <ul>
         <li><strong>Données sur ton appareil</strong> (art. 2) : conservées tant que l'application est installée, effacées à la désinstallation.</li>
-        <li><strong>Sauvegarde cloud</strong> (art. 4, si activée) : conservée tant que ton compte existe, supprimée dans un délai de 30 jours après la suppression du compte ou sur simple demande.</li>
+        <li><strong>Sauvegarde iCloud</strong> (art. 4) : conservée dans ton iCloud tant que tu ne la supprimes pas ; Alif K n'en détient aucune copie.</li>
         <li><strong>Statut d'abonnement</strong> (art. 5) : conservé tant que l'abonnement est actif, puis archivé le temps requis par nos obligations comptables et légales.</li>
       </ul>
     </div>
@@ -446,8 +442,8 @@
     <div class="article-head"><span class="article-num">11</span><h2>Sécurité</h2></div>
     <div class="article-body">
       <p>
-        Les échanges avec nos services, lorsqu'ils existent, sont chiffrés (HTTPS/TLS). L'accès à la base de
-        données de sauvegarde cloud est restreint et protégé par les mécanismes d'authentification de Firebase.
+        Les échanges avec nos services, lorsqu'ils existent, sont chiffrés (HTTPS/TLS). La sauvegarde iCloud
+        est protégée par les mécanismes de sécurité d'Apple liés à ton identifiant Apple.
       </p>
     </div>
   </section>
@@ -456,7 +452,7 @@
     <div class="article-head"><span class="article-num">12</span><h2>Transferts hors Union européenne</h2></div>
     <div class="article-body">
       <p>
-        Firebase (Google) et RevenueCat peuvent traiter des données sur des serveurs situés hors de l'Union
+        RevenueCat peut traiter des données sur des serveurs situés hors de l'Union
         européenne, notamment aux États-Unis. Ces transferts sont encadrés par les clauses contractuelles types
         de la Commission européenne ou un mécanisme équivalent reconnu par le RGPD.
       </p>
@@ -473,7 +469,8 @@
       <p>
         Comme la majorité de tes données ne quitte jamais ton appareil, tu peux exercer la plupart de ces
         droits toi-même, directement dans l'application (modification des favoris, des réglages, désinstallation).
-        Pour tout ce qui concerne une sauvegarde cloud ou ton abonnement, écris-nous à
+        La sauvegarde iCloud se gère depuis les réglages de l'application ou de ton iPhone. Pour tout ce qui
+        concerne ton abonnement, écris-nous à
         <a class="inline-link" href="mailto:contact@alif-k.com">contact@alif-k.com</a> — nous répondons sous un mois.
       </p>
       <p>
