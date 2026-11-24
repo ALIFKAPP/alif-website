@@ -2,7 +2,7 @@
 // while the app isn't published on that store: its button shows
 // "Bientôt disponible" instead.
 var ALIF_STORES = {
-  appStore: '', // e.g. https://apps.apple.com/app/id0000000000
+  appStore: 'https://apps.apple.com/app/id6827141032',
   playStore: '', // e.g. https://play.google.com/store/apps/details?id=com.alifk.alif
 };
 
@@ -27,6 +27,8 @@ var ALIF_STORES = {
   document.querySelectorAll('[data-stores]').forEach(function (el) {
     el.innerHTML = html;
   });
+  // The note under the buttons: the app is out on one store, the other is
+  // still to come; nothing to say once both are live.
   document.querySelectorAll('[data-soon-note]').forEach(function (el) {
     el.hidden = !!(ALIF_STORES.appStore && ALIF_STORES.playStore);
   });
