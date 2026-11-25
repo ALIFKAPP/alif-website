@@ -29,7 +29,7 @@
     entries.forEach(function (e) {
       if (e.isIntersecting) setStep(+e.target.dataset.i);
     });
-  }, { threshold: 0, rootMargin: window.matchMedia('(max-width: 860px)').matches ? '-58% 0px -28% 0px' : '-45% 0px -45% 0px' });
+  }, { threshold: 0, rootMargin: window.matchMedia('(max-width: 860px)').matches ? '-64% 0px -22% 0px' : '-45% 0px -45% 0px' });
   steps.forEach(function (s) { sio.observe(s); });
 
   // Hero phone: slight parallax and shrink while scrolling away.
@@ -71,5 +71,28 @@
     wrap.addEventListener('pointerleave', function () {
       fr.forEach(function (f) { f.style.setProperty('--ry', '0deg'); f.style.setProperty('--rx', '0deg'); });
     });
+  }
+
+  // Mobile: a download button that follows the reader once the steps are behind
+  // them (it would cover their text), until the download section is on screen.
+  var cta = document.getElementById('stickyCta');
+  var watchSection = document.querySelector('.watch');
+  var dlSection = document.getElementById('telecharger');
+  if (cta && watchSection && dlSection) {
+    var pastSteps = false, atDownload = false, ctaTick = false;
+    var showCta = function () { cta.classList.toggle('on', pastSteps && !atDownload); };
+    new IntersectionObserver(function (entries) {
+      atDownload = entries[0].isIntersecting;
+      showCta();
+    }, { threshold: 0.15 }).observe(dlSection);
+    window.addEventListener('scroll', function () {
+      if (ctaTick) return;
+      ctaTick = true;
+      requestAnimationFrame(function () {
+        ctaTick = false;
+        var p = watchSection.getBoundingClientRect().top < window.innerHeight * 0.6;
+        if (p !== pastSteps) { pastSteps = p; showCta(); }
+      });
+    }, { passive: true });
   }
 })();
