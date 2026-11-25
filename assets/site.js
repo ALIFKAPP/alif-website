@@ -29,7 +29,7 @@
     entries.forEach(function (e) {
       if (e.isIntersecting) setStep(+e.target.dataset.i);
     });
-  }, { threshold: 0, rootMargin: '-45% 0px -45% 0px' });
+  }, { threshold: 0, rootMargin: window.matchMedia('(max-width: 860px)').matches ? '-58% 0px -28% 0px' : '-45% 0px -45% 0px' });
   steps.forEach(function (s) { sio.observe(s); });
 
   // Hero phone: slight parallax and shrink while scrolling away.
