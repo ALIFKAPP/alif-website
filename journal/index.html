@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>Le Journal d'Alif</title>
+  <meta name="description" content="Un post du Journal de l'application Alif a été partagé avec toi.">
+  <meta name="theme-color" content="#070A1C">
+  <link rel="icon" href="../assets/img/icone.jpg">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <link rel="stylesheet" href="../assets/site.css">
+</head>
+<body>
+<header class="nav solid" id="nav">
+  <div class="wrap">
+    <a class="brand" href="../index.html"><img src="../assets/img/icone.jpg" alt="">Alif</a>
+    <nav class="nav-links">
+      <a href="../index.html#parcours">L'app</a>
+      <a href="../index.html#montre">Apple Watch</a>
+      <a href="../index.html#premium">Premium</a>
+      <a href="../index.html#faq">Questions</a>
+      <a class="pill" href="https://apps.apple.com/app/id6827141032">Télécharger</a>
+    </nav>
+  </div>
+</header>
+<main class="landing">
+  <div class="halo"><i class="a"></i><i class="b"></i><i class="c"></i></div>
+  <div class="wrap center">
+    <img class="sym" src="../assets/img/symbole.svg" alt="Alif">
+    <h1 id="postTitle">Un post du Journal d'Alif</h1>
+    <p class="lead" id="postLead">Ce lien s'ouvre dans le Journal d'Alif. Installe l'application, puis touche de nouveau le lien reçu.</p>
+    <p><a class="pill" id="openApp" href="alif://journal" hidden>Ouvrir dans Alif</a></p>
+    <div class="stores" data-stores></div>
+    <p class="note" data-soon-note>La version Android arrive bientôt, in shā' Allah.</p>
+  </div>
+</main>
+<footer>
+  <div class="wrap">
+    <span>© 2026 Alif K</span>
+    <div class="links">
+      <a href="../mentions-legales/index.html">Mentions légales</a>
+      <a href="../confidentialite/index.html">Politique de confidentialité</a>
+      <a href="../conditions/index.html">Conditions d'utilisation</a>
+      <a href="../assistance/index.html">Aide et contact</a>
+      <a href="mailto:contact@alif-k.com">contact@alif-k.com</a>
+    </div>
+  </div>
+</footer>
+<script src="../assets/stores.js"></script>
+<script>
+// The link is https://alif-k.com/journal#p=<post id>. On a phone with Alif the
+// app opens at once (universal link); here, a short taste of the post and the
+// way to get the app.
+(function () {
+  var m = /[#?&]p=([A-Za-z0-9_-]+)/.exec(location.hash || location.search);
+  if (!m) return;
+  var id = m[1];
+  var open = document.getElementById('openApp');
+  open.href = 'alif://journal?p=' + id;
+  open.hidden = false;
+  fetch('https://opensheet.elk.sh/1Y6ptOb1shDP-eNp8Z4XFuqIwYL7ibfbISWQlpm9Bguk/Posts')
+    .then(function (r) { return r.json(); })
+    .then(function (rows) {
+      var p = rows.filter(function (x) { return String(x.id) === id; })[0];
+      if (!p || !p.title) return;
+      var text = String(p.text || '').replace(/\\n/g, ' ').replace(/\s+/g, ' ').trim();
+      if (text.length > 220) text = text.slice(0, 220).replace(/\s+\S*$/, '') + '…';
+      document.title = p.title + " · Journal d'Alif";
+      document.getElementById('postTitle').textContent = p.title;
+      document.getElementById('postLead').textContent = text + ' Lis la suite dans l\'application Alif.';
+    })
+    .catch(function () {});
+})();
+</script>
+</body>
+</html>
